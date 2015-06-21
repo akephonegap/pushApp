@@ -130,12 +130,7 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 		alert("Post token for registered device with data " + JSON.stringify(user));
 		
 	
-		$cordovaSocialSharing.share($scope.regId, subject, file, link)// Share via native share sheet
-		.then(function(result) {
-			// Success!
-		}, function(err) {
-			// An error occured. Show a message to the user
-		}); 
+		
 
 
 		
