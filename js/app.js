@@ -49,7 +49,9 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 	};
 
 	$scope.$on('$cordovaPush:notificationReceived', function(event, notification) {
+	
 		alert(JSON.stringify([notification]));
+		
 		if (ionic.Platform.isAndroid()) {
 			handleAndroid(notification);
 		} else if (ionic.Platform.isIOS()) {
