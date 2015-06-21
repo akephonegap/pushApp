@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.akemys.pushapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+
+	<name>pushApp</name>
+	<description>Egy kis tesztelés</description>
+	<author email="lukacsisz@gain.nyme.hu" >Lukácsi Szilárd</author>
+	
+	
+	<preference name="permissions" value="none" />
+	<preference name="phonegap-version" value="3.7.0" />
+	<preference name="orientation" value="portrait" />
+	<preference name="target-device" value="universal" />
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="true" />
+	<preference name="prerendered-icon" value="true" />
+	<preference name="stay-in-webview" value="false" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
+	<preference name="detect-data-types" value="true" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="show-splash-screen-spinner" value="false" />
+	<preference name="auto-hide-splash-screen" value="true" />
+	<preference name="disable-cursor" value="false" />
+	<preference name="android-minSdkVersion" value="7" />
+	<preference name="android-installLocation" value="auto" />
+	
+	
+	<icon gap:density="ldpi" gap:platform="android" src="cordova/cordova_android_36.png" />
+	<icon gap:density="mdpi" gap:platform="android" src="cordova/cordova_android_48.png" />
+	<icon gap:density="hdpi" gap:platform="android" src="cordova/cordova_android_72.png" />
+	<icon gap:density="xhdpi" gap:platform="android" src="cordova/cordova_android_96.png" />
+	<icon gap:platform="ios" height="57" src="cordova/cordova_ios_57.png" width="57" />
+	<icon gap:platform="ios" height="72" src="cordova/cordova_ios_72.png" width="72" />
+	<icon gap:platform="ios" height="114" src="cordova/cordova_ios_114.png" width="114" />
+	<icon gap:platform="ios" height="144" src="cordova/cordova_ios_144.png" width="144" />
+	<icon gap:platform="ios" height="120" src="cordova/cordova_ios_120.png" width="120" />
+	<icon gap:platform="ios" height="76" src="cordova/cordova_ios_76.png" width="76" />
+	<icon gap:platform="ios" height="152" src="cordova/cordova_ios_152.png" width="152" />
+	<gap:splash gap:platform="ios" height="480" src="cordova/res/screen/ios/screen-iphone-portrait.png" width="320" />
+	<gap:splash gap:platform="ios" height="960" src="cordova/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+	<gap:splash gap:platform="ios" height="320" src="cordova/res/screen/ios/screen-iphone-landscape.png" width="480" />
+	<gap:splash gap:platform="ios" height="640" src="cordova/res/screen/ios/screen-iphone-landscape-2x.png" width="960" />
+	<gap:splash gap:platform="ios" height="1024" src="cordova/res/screen/ios/screen-ipad-portrait.png" width="768" />
+	<gap:splash gap:platform="ios" height="2008" src="cordova/res/screen/ios/screen-ipad-portrait-2x.png" width="1536" />
+	<gap:splash gap:platform="ios" height="768" src="cordova/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+	<gap:splash gap:platform="ios" height="1496" src="cordova/res/screen/ios/screen-ipad-landscape-2x.png" width="2048" />
+	<gap:splash gap:platform="ios" height="1136" src="cordova/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+	
+	
+	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+	<gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
+
+	
+	<gap:plugin name="org.apache.cordova.console" />
+	<gap:plugin name="org.apache.cordova.device" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="org.apache.cordova.file" />
+	<gap:plugin name="org.apache.cordova.media" />
+	
+	<access origin="*" />
+	<engine name="android" spec="^4.0.0" />
+	<engine name="ios" spec="^3.8.0" />
+</widget>
