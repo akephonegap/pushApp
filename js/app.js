@@ -8,7 +8,7 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 
 	// Send to login if the URL was not found
 	$urlRouterProvider.otherwise('/');
-}).controller('homeCtrl', function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, $http) {
+}).controller('homeCtrl', function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast,$cordovaSocialSharing, $http) {
 
 	$scope.notifications = [];
 
@@ -128,6 +128,17 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 			token : $scope.regId
 		};
 		alert("Post token for registered device with data " + JSON.stringify(user));
+		
+	
+		$cordovaSocialSharing.share($scope.regId, subject, file, link)// Share via native share sheet
+		.then(function(result) {
+			// Success!
+		}, function(err) {
+			// An error occured. Show a message to the user
+		}); 
+
+
+		
 
 		$http.post('http://192.168.1.16:8000/subscribe', JSON.stringify(user)).success(function(data, status) {
 			alert("Token stored, device is successfully subscribed to receive push notifications.");
