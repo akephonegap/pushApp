@@ -22,7 +22,7 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 
 		if (ionic.Platform.isAndroid()) {
 			config = {
-				"senderID" : "AIzaSyAAvv7RdxDvN8wYTthINj1cRaCUIuPQB6k" // REPLACE THIS WITH YOURS FROM GCM CONSOLE - also in the project URL like: https://console.developers.google.com/project/434205989073
+				"senderID" : "293357625242" // REPLACE THIS WITH YOURS FROM GCM CONSOLE - also in the project URL like: https://console.developers.google.com/project/434205989073
 			};
 		} else if (ionic.Platform.isIOS()) {
 			config = {
