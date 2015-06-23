@@ -23,6 +23,10 @@
 	<preference name="android-minSdkVersion" value="7" />
 	<preference name="android-installLocation" value="auto" />
 	
+	<gap:config-file platform="android" parent="/manifest/application">
+	        android:windowSoftInputMode="stateVisible"
+	</gap:config-file> 
+	
 	
 	<icon gap:density="ldpi" gap:platform="android" src="cordova/cordova_android_36.png" />
 	<icon gap:density="mdpi" gap:platform="android" src="cordova/cordova_android_48.png" />
