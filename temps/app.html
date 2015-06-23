@@ -1,0 +1,55 @@
+<ion-view title="PushApp">
+	<ion-slide-box  show-pager="false"  on-slide-changed="slideHasChanged($index)" active-slide="slidestop($index)">
+		<ion-slide >
+			<div class="ionic login " style="background-image: url('css/mountains.jpg');" ng-app="login">
+				<div class="hero no-header flat">
+					<div class="content">
+						<i class="ion-map icon hero-icon royal-bg"></i>
+						<h1>App Name</h1>
+					</div>
+				</div>
+				<div class="list">
+					<label class="item item-input item-md-label" placeholder="Username" highlight-color="balanced" type="text">
+						<input type="text">
+						<span class="input-label">Username</span><div class="highlight highlight-balanced"></div></label>
+					<label class="item item-input item-md-label" placeholder="Password" highlight-color="energized" type="password">
+						<input type="password">
+						<span class="input-label">Password</span><div class="highlight highlight-energized"></div></label>
+				</div>
+				<div class="padding">
+					<button class="button button-block button-positive waves-effect waves-button waves-light">
+						Login
+					</button>
+				</div>
+				<div class="button-bar">
+					<button class="button button-small button-outline button-assertive light-bg icon-left ion-social-google waves-effect waves-button waves-light">
+						Google+
+					</button>
+					<button class="button button-small button-outline button-positive light-bg icon-left ion-social-facebook waves-effect waves-button waves-light">
+						Facebook
+					</button>
+				</div>
+			</div>
+		</ion-slide>
+		<ion-slide>
+			2
+		</ion-slide>
+		<ion-slide>
+			3
+		</ion-slide>
+	</ion-slide-box>
+</ion-view>
+
+<!--
+<div class="text-center padding">
+<button ng-disabled="registerDisabled" class="button button-bar-inline button-balanced" ng-click="register()">Register</button>
+<button ng-disabled="!registerDisabled" class="button button-bar-inline button-balanced" ng-click="unregister()">Unregister</button>
+</div>
+<p>Device Token</p>
+<textarea readonly>{{regId}}</textarea>
+<ion-list>
+<ion-item ng-repeat="notification in notifications track by $index" type="item-content">
+{{notification}}
+</ion-item>
+</ion-list>
+-->

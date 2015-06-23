@@ -1,14 +1,26 @@
-angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $urlRouterProvider) {
+angular.module('app', ['ionic', 'ngCordova']).config(function($stateProvider, $urlRouterProvider) {
 
-	$stateProvider.state('home', {
+	$stateProvider.state('app', {
 		url : '/',
-		templateUrl : 'temps/home.html',
-		controller : 'homeCtrl'
+		templateUrl : 'temps/app.html',
+		controller : 'appCtrl'
 	});
 
 	// Send to login if the URL was not found
 	$urlRouterProvider.otherwise('/');
-}).controller('homeCtrl', function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast,$cordovaSocialSharing, $http) {
+}).controller('appCtrl', function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, $cordovaSocialSharing, $http, $ionicSlideBoxDelegate) {
+
+
+	
+	$scope.slideHasChanged = function($index){
+		
+	};
+
+	$scope.slidestop = function(index) {
+		$ionicSlideBoxDelegate.enableSlide(false);
+	};
+
+
 
 	$scope.notifications = [];
 
@@ -49,9 +61,9 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 	};
 
 	$scope.$on('$cordovaPush:notificationReceived', function(event, notification) {
-	
+
 		alert(JSON.stringify([notification]));
-		
+
 		if (ionic.Platform.isAndroid()) {
 			handleAndroid(notification);
 		} else if (ionic.Platform.isIOS()) {
@@ -128,12 +140,6 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 			token : $scope.regId
 		};
 		alert("Post token for registered device with data " + JSON.stringify(user));
-		
-	
-		
-
-
-		
 
 		$http.post('http://192.168.1.16:8000/subscribe', JSON.stringify(user)).success(function(data, status) {
 			alert("Token stored, device is successfully subscribed to receive push notifications.");
@@ -175,4 +181,5 @@ angular.module('app', ['ionic','ngCordova']).config(function($stateProvider, $ur
 	};
 
 });
+
 
